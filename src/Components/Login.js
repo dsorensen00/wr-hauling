@@ -13,8 +13,15 @@ export default class extends Component{
         })
         console.log(this.state)
    }
-   handleSubmit=()=>{
-       fetch()
+   handleSubmit=(event)=>{
+       event.preventDefault()
+       fetch('http://localhost:4000/login', {
+           method:'POST',
+           headers:{
+               'content-type':'application/json'
+           },
+           body:JSON.stringify(this.state)
+       })
    }
    
    render(){
@@ -30,7 +37,7 @@ export default class extends Component{
                     </div>
                 </div>
                 <div className="container loginContainer">
-                    <form >
+                    <form onSubmit={this.handleSubmit}>
                         <div>
                             <input name="username" type="text" onChange={this.handleChange} className="col-sm-7 input-space" placeholder="User Name"/>
                         </div>
