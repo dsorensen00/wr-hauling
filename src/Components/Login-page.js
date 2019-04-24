@@ -1,30 +1,7 @@
-import React, {Component} from 'react'
+import React, { useEffect, useState } from 'react'
 
-export default class extends Component{
+export default ()=>{
    
-   state= {
-       username: '',
-       password: ''
-   }
-   
-   handleChange = (event) => {
-        this.setState({
-            [event.target.name] : event.target.value
-        })
-        console.log(this.state)
-   }
-   handleSubmit=(event)=>{
-       event.preventDefault()
-       fetch('http://localhost:4000/login', {
-           method:'POST',
-           headers:{
-               'content-type':'application/json'
-           },
-           body:JSON.stringify(this.state)
-       })
-   }
-   
-   render(){
     return(
         <div className="body">
             <div className="container text-center  topa">
@@ -37,12 +14,12 @@ export default class extends Component{
                     </div>
                 </div>
                 <div className="container loginContainer">
-                    <form onSubmit={this.handleSubmit}>
+                    <form>
                         <div>
-                            <input name="username" type="text" onChange={this.handleChange} className="col-sm-7 input-space" placeholder="User Name"/>
+                            <input name="username" type="text" className="col-sm-7 input-space" placeholder="User Name"/>
                         </div>
                         <div>
-                            <input name="password" type="password" onChange={this.handleChange} className="col-sm-7 input-space" placeholder="Password"/>
+                            <input name="password" type="password" className="col-sm-7 input-space" placeholder="Password"/>
                         </div>
                         <button type="submit" className="btn loginButton">Login</button>
                     </form>
@@ -50,5 +27,4 @@ export default class extends Component{
             </div>
         </div>
     )
-}
 }
