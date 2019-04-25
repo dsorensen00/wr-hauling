@@ -5,7 +5,7 @@ import {BrowserRouter as
     Switch
 } from 'react-router-dom'
 import Login from './Login'
-import UserAccess from './User-access';
+import DriverPage from './Driver-page';
 
 
 export default ()=>{
@@ -13,7 +13,7 @@ export default ()=>{
         <Router>
             <Switch>
                 <Route exact path='/' component={Login} />
-                <Route exact path='user' component={UserAccess} />
+                <Route exact path='user' component={DriverPage} />
             </Switch>
         </Router>
     )
