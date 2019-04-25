@@ -9,17 +9,6 @@ export default ()=>{
 
 
 
-
-
-    const checkUser = () =>{
-        for (i = 0; i < arr.length; i++) { 
-            users[i]
-          }
-
-
-
-    }
-
    
     return(
         <div className="body">
