@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 export default ()=>{
 
 
-    
+
 
 
 
@@ -66,9 +66,9 @@ getUsers = async()=>{
 ^^run by useEffect to get the user data right off the bat^^
 
 
-const checkUserName =(user)=>{
+const checkUser2 =(user)=>{
 
-  if(user.driver === id ){
+  if(user.driver === userName ){
     localStorage.setItem('userId', id)
   };
   if(user.password === password){
