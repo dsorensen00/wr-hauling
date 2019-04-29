@@ -31,11 +31,9 @@ body{
 }
 .input-space:focus{
   outline: none;
-}
-.input-space:hover{
   background: #45A29E;
-  
 }
+
 ::placeholder{
   color: aliceblue;
 }
