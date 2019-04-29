@@ -1,16 +1,19 @@
-import React, {Component} from 'react'
+import React from 'react'
 
 
 
-export default class extends Component{
+export default ()=>{
     
-    render(){ 
-        return(
-            <>
-                <nav>
-                    <h1>THIS IS THE USER'S ACCESS PAGE</h1>
-                </nav>
-            </>
-        )
-    }
+
+    
+
+    return(
+        <>
+            <nav>
+                <h1>THIS IS THE USER'S ACCESS PAGE</h1>
+            </nav>
+
+
+        </>
+    )
 }
